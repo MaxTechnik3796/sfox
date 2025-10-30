@@ -1,0 +1,237 @@
+{
+  "mod_elements": [
+    {
+      "name": "Fox",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fox",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/sfox/models/item/fox.json",
+          "src/main/java/net/mcreator/sfox/item/FoxItem.java"
+        ]
+      }
+    },
+    {
+      "name": "FoxArmor",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fox_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sfox/item/FoxArmorItem.java",
+          "src/main/resources/assets/sfox/models/item/fox_armor_helmet.json"
+        ]
+      }
+    },
+    {
+      "name": "FoxR0",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fox_r_0",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/sfox/recipes/fox_r_0.json"
+        ]
+      }
+    },
+    {
+      "name": "FoxR1",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fox_r_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/sfox/recipes/fox_r_1.json"
+        ]
+      }
+    },
+    {
+      "name": "FoxPickup",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fox_pickup",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sfox/procedures/FoxPickupProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FoxPlace",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fox_place",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sfox/procedures/FoxPlaceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "direction",
+            "type": "direction"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EnablePrintSFOX",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enable_print_sfox",
+      "metadata": {
+        "files": [],
+        "type": "logic"
+      }
+    },
+    {
+      "name": "SnowFox",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "snow_fox",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sfox/item/SnowFoxItem.java",
+          "src/main/resources/assets/sfox/models/item/snow_fox.json"
+        ]
+      }
+    },
+    {
+      "name": "SnowFoxArmor",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "snow_fox_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/sfox/models/item/snow_fox_armor_helmet.json",
+          "src/main/java/net/mcreator/sfox/item/SnowFoxArmorItem.java"
+        ]
+      }
+    },
+    {
+      "name": "FoxR2",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fox_r_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/sfox/recipes/fox_r_2.json"
+        ]
+      }
+    },
+    {
+      "name": "FoxR3",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fox_r_3",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/sfox/recipes/fox_r_3.json"
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "tag_elements": {
+    "ITEMS:forge:armors/helmets": [
+      "CUSTOM:FoxArmor.helmet",
+      "CUSTOM:SnowFoxArmor.helmet"
+    ]
+  },
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "item.sfox.snow_fox": "§5Snow Fox",
+      "gamerule.enablePrintSFOX.description": "Enable Print SFOX",
+      "item.sfox.fox_armor_helmet": "§6Fox",
+      "item.sfox.snow_fox_armor_helmet": "§5Snow Fox",
+      "item.sfox.fox": "§6Fox",
+      "gamerule.enablePrintSFOX": "Enable Print SFOX"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "sfox",
+    "modName": "Super Fox",
+    "version": "1.1.1",
+    "description": "The mod adds the ability to pick up a fox, convert it into a hat and then put it on the head, which has a cute 3D-model.",
+    "author": "MaxTechnik, Suriken222, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "MIT License",
+    "serverSideOnly": false,
+    "modPicture": "super_fox",
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.20.1",
+    "credits": "MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.sfox"
+  },
+  "mcreatorVersion": 202400232117
+}

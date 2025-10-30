@@ -1,0 +1,7 @@
+{
+  "parent": "sfox:custom/fox",
+  "textures": {
+    "0": "sfox:block/fox",
+    "particle": "sfox:item/fox"
+  }
+}
