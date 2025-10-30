@@ -1,7 +1,0 @@
-{
-  "parent": "sfox:custom/snow_fox",
-  "textures": {
-    "0": "sfox:block/snow_fox",
-    "particle": "sfox:item/snow_fox"
-  }
-}

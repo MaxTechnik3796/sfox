@@ -1,8 +1,4 @@
 {
-  "item.sfox.snow_fox": "§5Snow Fox",
-  "gamerule.enablePrintSFOX.description": "Enable Print SFOX",
-  "item.sfox.fox_armor_helmet": "§6Fox",
-  "item.sfox.snow_fox_armor_helmet": "§5Snow Fox",
-  "item.sfox.fox": "§6Fox",
-  "gamerule.enablePrintSFOX": "Enable Print SFOX"
+  "item.sfox.fox": "Fox",
+  "item.sfox.snow_fox": "Snow Fox"
 }
