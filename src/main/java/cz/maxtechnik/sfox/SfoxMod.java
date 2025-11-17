@@ -23,6 +23,7 @@ import java.util.function.Function;
 import java.util.function.BiConsumer;
 
 @Mod(SfoxMod.MODID)
+@SuppressWarnings("removal")
 public class SfoxMod{
 	public static final Logger LOGGER=LogManager.getLogger(SfoxMod.class);
 	public static final String MODID="sfox";
