@@ -33,7 +33,7 @@ public class SfoxMod {
 				map.put(ArmorItem.Type.HELMET, 2);
 			}),
 			0, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.FOX_AMBIENT), Ingredient::of,
-			List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MODID, "fox"))),
+			List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MODID, "fox_model"))),
 			0, 0
 	));
 
@@ -42,7 +42,7 @@ public class SfoxMod {
 				map.put(ArmorItem.Type.HELMET, 2);
 			}),
 			0, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.FOX_AMBIENT), Ingredient::of,
-			List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MODID, "snow_fox"))),
+			List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MODID, "snow_fox_model"))),
 			0, 0
 	));
 
