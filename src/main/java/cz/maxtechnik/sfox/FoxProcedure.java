@@ -15,14 +15,16 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.world.item.component.CustomData;
 
 import java.util.Objects;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class FoxProcedure {
 
 	@SubscribeEvent
@@ -32,7 +34,7 @@ public class FoxProcedure {
 	}
 	private static void pickup(Entity entity, Entity sourceentity) {
 		if (entity == null || !(sourceentity instanceof Player player) || !player.isShiftKeyDown()) return;
-		if (!"minecraft:fox".equals(Objects.requireNonNull(ForgeRegistries.ENTITY_TYPES.getKey(entity.getType())).toString())) return;
+		if (!"minecraft:fox".equals(Objects.requireNonNull(BuiltInRegistries.ENTITY_TYPE.getKey(entity.getType())).toString())) return;
 		CompoundTag entityNBT = entity.saveWithoutId(new CompoundTag());
 		String foxType = entityNBT.getString("Type");
 		ItemStack foxItemStack;
@@ -40,10 +42,10 @@ public class FoxProcedure {
 		else if (foxType.equals("snow")) foxItemStack = new ItemStack(SfoxMod.SNOW_FOX.get());
 		else return;
 		if (entityNBT.contains("CustomName") && !entityNBT.getString("CustomName").isEmpty()) {
-			foxItemStack.setHoverName(Component.Serializer.fromJson(entityNBT.getString("CustomName")));
+			foxItemStack.set(DataComponents.CUSTOM_NAME, Component.Serializer.fromJson(entityNBT.getString("CustomName"), entity.level().registryAccess()));
 		}
 		if (entityNBT.contains("Age")) {
-			foxItemStack.getOrCreateTag().putInt("FoxAge", entityNBT.getInt("Age"));
+            CustomData.update(DataComponents.CUSTOM_DATA, foxItemStack, tag -> tag.putInt("FoxAge", entityNBT.getInt("Age")));
 		}
 		foxItemStack.setCount(1);
 		if (player.getMainHandItem().isEmpty()) {
@@ -67,13 +69,14 @@ public class FoxProcedure {
 		double z = pos.getZ() + direction.getStepZ() + 0.5;
 
 		String customNBT = "";
-		if (itemstack.hasCustomHoverName()) {
-			customNBT += ",CustomName:'" + Component.Serializer.toJson(itemstack.getHoverName()) + "'";
+		if (itemstack.has(DataComponents.CUSTOM_NAME)) {
+			customNBT += ",CustomName:'" + Component.Serializer.toJson(Objects.requireNonNull(itemstack.get(DataComponents.CUSTOM_NAME)), level.registryAccess()) + "'";
 		}
-		if (itemstack.hasTag()) {
-            assert itemstack.getTag() != null;
-            if (itemstack.getTag().contains("FoxAge")) {
-                customNBT += ",Age:" + itemstack.getTag().getInt("FoxAge");
+        CustomData customData = itemstack.get(DataComponents.CUSTOM_DATA);
+		if (customData != null) {
+            CompoundTag tag = customData.copyTag();
+            if (tag.contains("FoxAge")) {
+                customNBT += ",Age:" + tag.getInt("FoxAge");
             }
         }
 		if (!player.isCreative()) {

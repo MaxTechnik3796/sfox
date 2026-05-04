@@ -1,0 +1,9 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "sfox:snow_fox_model"
+      }
+    ]
+  }
+}
