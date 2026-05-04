@@ -29,18 +29,14 @@ public class SfoxMod {
 	public static final DeferredRegister<ArmorMaterial> ARMOR_MATERIALS = DeferredRegister.create(Registries.ARMOR_MATERIAL, MODID);
 
 	public static final DeferredHolder<ArmorMaterial, ArmorMaterial> FOX_ARMOR_MATERIAL = ARMOR_MATERIALS.register("fox", () -> new ArmorMaterial(
-			Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
-				map.put(ArmorItem.Type.HELMET, 2);
-			}),
+			Util.make(new EnumMap<>(ArmorItem.Type.class), map -> map.put(ArmorItem.Type.HELMET, 2)),
 			0, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.FOX_AMBIENT), Ingredient::of,
 			List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MODID, "fox_model"))),
 			0, 0
 	));
 
 	public static final DeferredHolder<ArmorMaterial, ArmorMaterial> SNOW_FOX_ARMOR_MATERIAL = ARMOR_MATERIALS.register("snow_fox", () -> new ArmorMaterial(
-			Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
-				map.put(ArmorItem.Type.HELMET, 2);
-			}),
+			Util.make(new EnumMap<>(ArmorItem.Type.class), map -> map.put(ArmorItem.Type.HELMET, 2)),
 			0, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.FOX_AMBIENT), Ingredient::of,
 			List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MODID, "snow_fox_model"))),
 			0, 0
