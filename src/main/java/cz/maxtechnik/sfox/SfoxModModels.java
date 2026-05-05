@@ -17,7 +17,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Collections;
 import java.util.Map;
-
+@SuppressWarnings("removal")
 @EventBusSubscriber(modid = SfoxMod.MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class SfoxModModels{
 	@SubscribeEvent
