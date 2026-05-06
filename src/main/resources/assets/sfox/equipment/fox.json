@@ -1,9 +1,9 @@
 {
-  "layers": {
-    "humanoid": [
-      {
-        "texture": "sfox:fox_model"
-      }
-    ]
-  }
+	"layers":{
+		"humanoid":[
+			{
+				"texture":"sfox:fox_model"
+			}
+		]
+	}
 }
