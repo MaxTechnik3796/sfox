@@ -9,7 +9,6 @@ version = "${mod_version}"
 displayName = "${mod_name}"
 displayURL = "https://discord.gg/mjVprFtWTk"
 authors = "${mod_authors}"
-logoFile = "pack.png"
 description = '''${mod_description}'''
 
 [[dependencies."${mod_id}"]]
