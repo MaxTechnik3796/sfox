@@ -2,7 +2,8 @@
 /.gradle/
 /build/
 /build/classes/java/main/
-/run/
+/runs/client/
 /.idea/
 /.settings/
 /desktop.ini
+/runs/
