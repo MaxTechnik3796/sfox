@@ -1,4 +1,4 @@
-**🦊 SuperFox**
+# 🦊 SuperFox
 
 Super Fox is a small and fun mod that lets you pick up a fox and wear it on your head as an adorable hat with a cute 3D model.
 
@@ -6,7 +6,13 @@ Simple idea, simple implementation — perfect for players who want a bit of cha
 
 ***
 
-⚒️ Modrinth version: [Here](https://modrinth.com/mod/sfox)
+📦 CurseForge: [[Here]](https://www.curseforge.com/minecraft/mc-mods/sfox)
+
+📦 Modrinth: [[Here]](https://modrinth.com/mod/sfox)
+
+🟠 GitHub Issue: [[Here]](https://github.com/MaxTechnik3796/sfox)
+
+💬 Discord: [[Here]](https://discord.gg/mjVprFtWTk)
 
 ***
 
@@ -22,10 +28,3 @@ Simple idea, simple implementation — perfect for players who want a bit of cha
 **🖼️ Preview**
 
 ![Foxes](https://cdn.modrinth.com/data/cached_images/e3a1d6b47e7bb5b0724d701d0fb768e18a16c3a7.png)
-
-***
-
-**🧩 Compatibility**
-
-*   Does not require any additional mods
-*   Designed to work out of the box
